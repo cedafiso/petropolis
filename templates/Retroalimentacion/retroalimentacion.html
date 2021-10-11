@@ -23,7 +23,8 @@
     />
 
     <!-- Custom styles for this template-->
-    <link href="../../assets/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/sb-admin-2.min.css")}}' />
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/style.css")}}' />
   </head>
 
   <body id="page-top">
@@ -44,7 +45,7 @@
               width="50"
               height="50"
               class="ImgLogo"
-              src="../../assets/img/logo.png"
+              src='{{ url_for("static", filename="media/logo.png")}}'
               alt="Logo"
             />
           </div>
@@ -56,7 +57,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="../Informacion/informacion.html">
+          <a class="nav-link" href="/dashboard">
             <i class="far fa-address-card"></i>
             <span>Información</span></a
           >
@@ -67,19 +68,13 @@
         <!-- Nav Item - Utilities Collapse Menu -->
 
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-          <a class="nav-link" href="../Ventas/ventas.html">
-            <i class="fas fa-poll"></i>
-            <span>Ventas</span></a
-          >
-        </li>
         <!-- Divider -->
         <hr class="sidebar-divider" />
         <!-- Nav Item - Tables -->
         <li class="nav-item">
           <a
             class="nav-link"
-            href="../Retroalimentación/retroalimentacion.html"
+            href="/dashboard/retroalimentacion"
           >
             <i class="fas fa-people-arrows"></i>
             <span>Retroalimentación</span></a
@@ -89,7 +84,7 @@
         <hr class="sidebar-divider d-none d-md-block" />
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-          <a class="nav-link" href="../Actividades/actividades.html">
+          <a class="nav-link" href="/dashboard/actividades">
             <i class="fas fa-fw fa-table"></i>
             <span>Actividades</span></a
           >

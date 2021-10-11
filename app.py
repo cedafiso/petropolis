@@ -26,6 +26,10 @@ def loginDashboard():
 @app.route('/dashboard/actividades')
 def loginActividades():
     return render_template('./Actividades/actividades.html')
+
+@app.route('/dashboard/retroalimentacion')
+def retroalimentacion():
+    return render_template("./Retroalimentacion/retroalimentacion.html")
     
 if __name__=='__main__':
     app.run(port=8080, debug=True)
