@@ -7,6 +7,6 @@ loginButton.addEventListener("click" , (e) => {
     let username = loginForm.user.value;
     let password = loginForm.password.value;
     if (username == "Demo" && password == "1234"){
-        window.location.href = `/login/${username}`;
+        window.location.href = `/dashboard`;
     }
 });

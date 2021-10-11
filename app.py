@@ -11,9 +11,13 @@ def index():
 def login():
     return render_template('./ingresar/ingresar.html')
 
-@app.route('/login/<user>')
-def loginDashboard(user):
+@app.route('/dashboard')
+def loginDashboard():
     return render_template('./Dashboard/dashboard.html')
 
+@app.route('/dashboard/actividades')
+def loginActividades():
+    return render_template('./Actividades/actividades.html')
+    
 if __name__=='__main__':
     app.run(port=8080, debug=True)

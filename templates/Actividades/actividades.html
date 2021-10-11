@@ -23,7 +23,8 @@
     />
 
     <!-- Custom styles for this template-->
-    <link href="../../assets/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link href='{{ url_for("static", filename="css/style.css")}}' rel="stylesheet" />
+    <link href='{{ url_for("static", filename="css/sb-admin-2.min.css")}}' rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -44,7 +45,7 @@
               width="50"
               height="50"
               class="ImgLogo"
-              src="../../assets/img/logo.png"
+              src='{{ url_for("static", filename="media/logo.png")}}'
               alt="Logo"
             />
           </div>
