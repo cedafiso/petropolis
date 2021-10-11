@@ -3,7 +3,8 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/productos.css")}}'>
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/style.css")}}'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>productos</title>
 </head>
@@ -11,15 +12,15 @@
     <div id="wrapper_header">
         <div class="wraper_header_nav">
         <header>
-            <img src="logo.png" alt:"" width="20%" height="80%"/>
+            <img src='{{ url_for("static", filename="media/logo.png")}}' alt:"" width="20%" height="80%"/>
             <h1>Petropolis</h1>
         </header>
         <nav>
-            <div class="nav-link"><a href="">Home</a></div>
-           <div class="nav-link"><a href="nosotros.html">Nosotros</a></div>
-           <div class="nav-link"><a href="">Productos</a></div>
+            <div class="nav-link"><a href="/">Home</a></div>
+           <div class="nav-link"><a href="/nosotros">Nosotros</a></div>
+           <div class="nav-link"><a href="/productos">Productos</a></div>
            <div class="nav-link"><a href="">Contactos</a></div>
-            <a href="ingresar.html"><button class="login">Ingresar</button></a>
+            <a href="/login"><button class="login">Ingresar</button></a>
         </nav>
         </div>
     </div>

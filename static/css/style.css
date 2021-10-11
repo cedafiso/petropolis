@@ -4,14 +4,13 @@
 html{
     color: #DFE0E2;
     height: 100%;
-    background-image: url("../media/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 body{
     color: #DFE0E2;
     font-family: "Open Sans", sans-serif;
+    background-image: url("../media/background.png");
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 header{
     width: 30%;

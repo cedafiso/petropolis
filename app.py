@@ -9,8 +9,16 @@ def index():
 
 @app.route('/login')
 def login():
-    return render_template('./ingresar/ingresar.html')
+    return render_template('./Ingresar/ingresar.html')
 
+@app.route('/nosotros')
+def nosotros():
+    return render_template('./Nosotros/nosotros.html')
+
+@app.route('/productos')
+def productos():
+    return render_template('./Productos/productos.html')
+    
 @app.route('/dashboard')
 def loginDashboard():
     return render_template('./Dashboard/dashboard.html')

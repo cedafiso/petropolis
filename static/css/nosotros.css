@@ -1,10 +1,17 @@
+*{
+    margin: 0;
+}
 .container{
-    max-width: 850px;
-    margin: 0 auto;
+    width: 60%;
+    padding-top: 2%;
+    padding-bottom: 15%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
 }
 .container h1{
     text-align: center;
-    padding: 10px;
+    padding-bottom: 10px;
 }
 .container p{
     line-height: 30px;
