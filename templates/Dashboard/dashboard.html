@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Petropolis</title>
+
+    <!-- Custom fonts for this template-->
+    <script
+      src="https://kit.fontawesome.com/966b7cffcc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/sb-admin-2.min.css")}}' />
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/style.css")}}' />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="../Informacion/informacion.html"
+        >
+          <div class="sidebar-brand-icon">
+            <img
+              width="50"
+              height="50"
+              class="ImgLogo"
+              src='{{ url_for("static", filename="media/logo.png")}}'
+              alt="Logo"
+            />
+          </div>
+          <div class="sidebar-brand-text mx-3">Petropolis</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-acordion" href="../Informacion/informacion.html">
+            <i class="far fa-address-card"></i>
+            <span>Información</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+        <!-- Nav Item - Utilities Collapse Menu -->
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-acordion" href="../Ventas/ventas.html">
+            <i class="fas fa-poll"></i>
+            <span>Ventas</span></a
+          >
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a
+            class="nav-link nav-link-acordion"
+            href="../Retroalimentación/retroalimentacion.html"
+          >
+            <i class="fas fa-people-arrows"></i>
+            <span>Retroalimentación</span></a
+          >
+        </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-acordion" href="../Actividades/actividades.html">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Actividades</span></a
+          >
+        </li>
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="
+              navbar navbar-expand navbar-light
+              bg-white
+              topbar
+              mb-4
+              static-top
+              shadow
+            "
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <h1 class="h3 mb-4 text-gray-800">Información del usuario</h1>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <input type="submit" value="Buscar usuario" />
+                <form
+                  class="
+                    d-none d-sm-inline-block
+                    form-inline
+                    mr-auto
+                    ml-md-3
+                    my-2 my-md-0
+                    mw-100
+                    navbar-search
+                  "
+                >
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control bg-light border-0 small"
+                      placeholder="Digite el id del usuario"
+                      aria-label="Search"
+                      aria-describedby="basic-addon2"
+                    />
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <div>
+                  <input
+                    type="submit"
+                    class="mt-5 inputEditarUser"
+                    value="Editar usuario"
+                  />
+                  <select
+                    class="form-select ml-md-4 mr-auto"
+                    aria-label="Default select example"
+                  >
+                    <option selected>¿Qué desea editar del usuario</option>
+                    <option value="">Nombres</option>
+                    <option value="">ID</option>
+                    <option value="">Password</option>
+                    <option value="">Correo</option>
+                    <option value="">Dependencia</option>
+                    <option value="">Contrato</option>
+                    <option value="">Cargo</option>
+                    <option value="">Fecha ingreso</option>
+                    <option value="">Fecha salida</option>
+                  </select>
+                  <div>
+                    <input
+                      class="mt-5 col-7"
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Ingrese la información actualizada"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 mt-4">
+                <input type="submit" value="Eliminar usuario" />
+                <div>
+                  <label class="mt-4 text-secondary" for=""
+                    >¿Qué deseas eliminar del usuario?</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../assets/js/sb-admin-2.min.js"></script>
+  </body>
+</html>
+<style></style>

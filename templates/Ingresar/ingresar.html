@@ -18,21 +18,21 @@
            <div class="nav-link"><a href="/">Home</a></div>
            <div class="nav-link"><a href="">Nosotros</a></div>
            <div class="nav-link"><a href="">Productos</a></div>
-           <div class="nav-link"><a href="">Contactos</a></div>
+           <div class="nav-link nav-link-end"><a href="">Contactos</a></div>
         </nav>
         </div>
     </div>
     <main>
         <div class="login_section">
-                <form>
+                <form id="formLogin">
                     <h2>Login</h2>
                     <div class="form_element">
                         <label>ID: <br></label>
-                        <input type="text" placeholder="ID"></input>
+                        <input type="text" name="user" placeholder="ID"></input>
                     </div>
                     <div class="form_element">
                         <label>Password: <br></label>
-                        <input type="password" placeholder="******"></input>
+                        <input type="password" name="password" placeholder="******"></input>
                     </div>
                     <div class="form_element form_element_actions">
                         <div class="form_elements_action_s" >
@@ -40,7 +40,7 @@
                             <label>Recuerdame</label>
                         </div>
                         <div class="form_elements_action_s">
-                            <button  class="login_form">Ingresar</button>
+                            <input type="submit" id="loginButton" class="login_form" value="Ingresar"></input>
                         </div>
                     <div>
                 </form>      
@@ -76,4 +76,5 @@
         </div>
     </footer>
 </body>
+ <script  src='{{ url_for("static", filename="js/login.js")}}'></script>
 </html>

@@ -37,20 +37,35 @@ main{
 }
 nav{
     display: inline-flex;
+    align-items: center;
 }
 .nav-link{
     display: flex;
     margin-right: 1em;
     margin-left: 1em;
+    height: 1.2em;
     transition: all 0.1s linear;
     align-items: center;
+    border-right: 0.5px solid lightgray;
+    margin: 0px;
+    padding-right: 0.75em;
+    padding-left: 0.75em;
+}
+.nav-link-acordion{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nav-link-end{
+    border-right: none;
 }
 .nav-link a{
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color:#DFE0E2;
     font-weight: bold;
 }
-.nav-link:hover{
+.nav-link a:hover{
     transform: translate( 0, -4px);
     transform: scale(1.05);
     cursor: pointer;
@@ -161,4 +176,11 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#accordionSidebar {
+    background: #13192A;
+}
+
+.navbar-search {
+    padding: 20px;
 }
