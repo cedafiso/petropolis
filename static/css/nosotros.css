@@ -16,3 +16,14 @@
 .container p{
     line-height: 30px;
 }
+.container_mision, .container_vision, .container_recorrido{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_mision div img, .container_vision div img, .container_recorrido div img{
+    border-radius: 10px;
+}
