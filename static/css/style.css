@@ -300,6 +300,7 @@ th {
       margin: 10px;
       column-gap: 30px;
       column-rule: 2px solid rgb(0, 0, 0);
+      
   }
   .user_creation label{
       text-align: center;
@@ -329,6 +330,16 @@ th {
   .boton_editar{
       margin-top: 0%;
   }
+  .container-fluid h1{
+      text-align: center;
+  }
+  .buscar_empleado{
+      margin-bottom: 210px;
+  }
+  .eliminar_user{
+      text-align: center;
+  }
+
   
   
 

@@ -40,7 +40,7 @@
           href="../Informacion/informacion.html"
         >
           <div class="sidebar-brand-icon">
-            <img
+            <img 
               width="50"
               height="50"
               class="ImgLogo"
@@ -202,6 +202,79 @@
             </div>
                   
           </div>
+          <div class="user_creation">
+            <h4>Edición del usuario</h4>
+            <div class="columna">
+              <div class="buscar_empleado">
+              <h5>Buscar usuario</h5>
+              <label for="Buscar">Buscar Usuario</label>
+              <input type="text" name="Buscar" id="Buscar"
+              placeholder="Escriba el id del usuario"> 
+              <br/>
+
+              </div>
+              <h5>Editar usuario</h5>
+              <label for="Buscar_user">Buscar Usuario</label>
+              <input type="text" name="Buscar_user" id="Buscar_user"
+              placeholder="Escriba el id del usuario">
+
+              <label for="Editar">¿Qué campo desea actualizar?</label>
+              <select name="Editar" id="Editar">
+                <option value="ID">ID</option>
+                <option value="Nombres">Nombres</option>
+                <option value="Email">Email</option>
+                <option value="Password">Password</option>                
+                <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                <option value="Género">Género</option>
+                <option value="Dependencia">Dependencia</option>
+                <option value="Salario">Salario</option>
+                <option value="Tipo de contrato">Tipo de contrato</option>
+                <option value="Cargo">Cargo</option>
+                <option value="Fecha de ingreso">Fecha de ingreso</option>
+                <option value="Fecha de salida">Fecha de salida</option>
+              </select> <br>
+
+              <label for="Digite">Actualice el campo requerido</label>
+              <input type="text" name="Digite" id="Digite">
+              <label>¿Desea actualizar el campo?</label> <br/>
+              <input type="button" name="Actualizar" id="Actualizar" value="Actualizar"> 
+              <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
+
+            </div>
+          </div> 
+          <div class="user_creation">
+            <h4>Eliminación del usuario</h4>
+            <div class="eliminar_user">
+              <label for="Buscar_user">Buscar Usuario</label>
+              <input type="text" name="Buscar_user" id="Buscar_user"
+              placeholder="Escriba el id del usuario"> <br/>
+              
+              <label for="Eliminar">¿Qué tipo de eliminación desea realizar?</label>
+              <select name="Eliminar" id="Eliminar">
+                <option value="Campos de usuario">Campos de usuario</option>
+                <option value="Total">Total</option>
+              </select> <br>
+              
+              <label for="Eliminar">¿Qué campo desea eliminar?</label>
+              <select name="Eliminar" id="Eliminar">
+                <option value="ID">ID</option>
+                <option value="Nombres">Nombres</option>
+                <option value="Email">Email</option>
+                <option value="Password">Password</option>                
+                <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                <option value="Género">Género</option>
+                <option value="Dependencia">Dependencia</option>
+                <option value="Salario">Salario</option>
+                <option value="Tipo de contrato">Tipo de contrato</option>
+                <option value="Cargo">Cargo</option>
+                <option value="Fecha de ingreso">Fecha de ingreso</option>
+                <option value="Fecha de salida">Fecha de salida</option>
+              </select> <br>
+              <label>¿Está seguro de realizar la siguiente acción?</label> <br/>
+              <input type="button" name="Eliminar" id="Eliminar" value="Eliminar"> 
+              <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
+            </div> 
+          </div> 
 
 
           
