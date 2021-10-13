@@ -128,6 +128,7 @@
           </div>
 
           <div class="user_creation">
+            
             <h4>Registro de usuario</h4>
             <div class="columna">            
               <h5>Datos personales</h5>      
@@ -200,7 +201,7 @@
               <input type="button" name="Aceptar" id="Aceptar" value="Cancelar">
             </div>
             </div>
-                  
+            <br/>   
           </div>
           <div class="user_creation">
             <h4>Edición del usuario</h4>
@@ -211,8 +212,8 @@
               <input type="text" name="Buscar" id="Buscar"
               placeholder="Escriba el id del usuario"> 
               <br/>
-
               </div>
+              
               <h5>Editar usuario</h5>
               <label for="Buscar_user">Buscar Usuario</label>
               <input type="text" name="Buscar_user" id="Buscar_user"
@@ -239,43 +240,73 @@
               <label>¿Desea actualizar el campo?</label> <br/>
               <input type="button" name="Actualizar" id="Actualizar" value="Actualizar"> 
               <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
-
             </div>
-          </div> 
+          </div>
+<br/>
           <div class="user_creation">
-            <h4>Eliminación del usuario</h4>
-            <div class="eliminar_user">
-              <label for="Buscar_user">Buscar Usuario</label>
-              <input type="text" name="Buscar_user" id="Buscar_user"
-              placeholder="Escriba el id del usuario"> <br/>
-              
-              <label for="Eliminar">¿Qué tipo de eliminación desea realizar?</label>
-              <select name="Eliminar" id="Eliminar">
-                <option value="Campos de usuario">Campos de usuario</option>
-                <option value="Total">Total</option>
-              </select> <br>
-              
-              <label for="Eliminar">¿Qué campo desea eliminar?</label>
-              <select name="Eliminar" id="Eliminar">
-                <option value="ID">ID</option>
-                <option value="Nombres">Nombres</option>
-                <option value="Email">Email</option>
-                <option value="Password">Password</option>                
-                <option value="Fecha de nacimiento">Fecha de nacimiento</option>
-                <option value="Género">Género</option>
-                <option value="Dependencia">Dependencia</option>
-                <option value="Salario">Salario</option>
-                <option value="Tipo de contrato">Tipo de contrato</option>
-                <option value="Cargo">Cargo</option>
-                <option value="Fecha de ingreso">Fecha de ingreso</option>
-                <option value="Fecha de salida">Fecha de salida</option>
-              </select> <br>
-              <label>¿Está seguro de realizar la siguiente acción?</label> <br/>
-              <input type="button" name="Eliminar" id="Eliminar" value="Eliminar"> 
-              <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
-            </div> 
-          </div> 
+            <h4>Manejo del usuario</h4>
+            <div class="columna">
+                <div class="eliminar_user">
+                  <h5>Eliminar usuario</h5>
+                  <label for="Buscar_user">Ingrese el id del usuario</label>
+                  <input type="text" name="Buscar_user" id="Buscar_user"
+                  placeholder="Escriba el id del usuario"> <br/>
+                 
+                  <label for="Eliminar">¿Qué tipo de eliminación desea realizar?</label>
+                  <select name="Eliminar" id="Eliminar">
+                    <option value="Campos de usuario">Campos de usuario</option>
+                    <option value="Total">Total</option>
+                  </select> <br>
+                
+                  <label for="Eliminar">¿Qué campo desea eliminar?</label>
+                  <select name="Eliminar" id="Eliminar">
+                    <option value="ID">ID</option>
+                    <option value="Nombres">Nombres</option>
+                    <option value="Email">Email</option>
+                    <option value="Password">Password</option>                
+                    <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                    <option value="Género">Género</option>
+                    <option value="Dependencia">Dependencia</option>
+                    <option value="Salario">Salario</option>
+                    <option value="Tipo de contrato">Tipo de contrato</option>
+                    <option value="Cargo">Cargo</option>
+                    <option value="Fecha de ingreso">Fecha de ingreso</option>
+                    <option value="Fecha de salida">Fecha de salida</option>
+                  </select> <br>
+                  <label>¿Está seguro de realizar la siguiente acción?</label> <br/>
+                  <input type="button" name="Eliminar" id="Eliminar" value="Eliminar"> 
+                  <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
 
+                  <div class="agregar_info">
+                    <h5>Agregar informacion del usuario</h5>
+                    <label for="agregar_info">Ingrese el id del usuario</label>
+                    <input type="text" name="agregar_info" id="agregar_info"
+                    placeholder="Escriba el id del usuario">
+          
+                      <label for="Agregar">¿Qué campo desea agregar?</label>
+                      <select name="Editar" id="Editar">
+                      <option value="ID">ID</option>
+                      <option value="Nombres">Nombres</option>
+                      <option value="Email">Email</option>
+                      <option value="Password">Password</option>                
+                      <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                      <option value="Género">Género</option>
+                      <option value="Dependencia">Dependencia</option>
+                      <option value="Salario">Salario</option>
+                      <option value="Tipo de contrato">Tipo de contrato</option>
+                      <option value="Cargo">Cargo</option>
+                      <option value="Fecha de ingreso">Fecha de ingreso</option>
+                      <option value="Fecha de salida">Fecha de salida</option>
+                    </select> <br>
+                    <label>¿Está seguro de realizar la siguiente acción?</label> <br/>
+                  <input type="button" name="si" id="si" value="Si"> 
+                  <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
+                </div>
+              </div> 
+            </div>
+            </div> 
+          </div>
+          
 
           
 

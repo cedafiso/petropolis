@@ -337,7 +337,10 @@ th {
       margin-bottom: 210px;
   }
   .eliminar_user{
-      text-align: center;
+    margin-bottom: 210px;
+  }
+  .agregar_info{
+    margin-top: 200px;
   }
 
   
