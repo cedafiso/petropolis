@@ -282,3 +282,56 @@ th {
   .text-center {
       text-align: center;
   }
+  *.user_creation{
+      margin: 10px;
+  }
+  .user_creation h4{
+      text-align: center;
+  }
+  .user_creation h4, h5{
+      color: #575e74;
+  }
+  .user_creation label{
+      color: #111d3b;
+      margin-top: 10px;
+  }
+  .columna{
+      column-count: 2;
+      margin: 10px;
+      column-gap: 30px;
+      column-rule: 2px solid rgb(0, 0, 0);
+  }
+  .user_creation label{
+      text-align: center;
+  }
+  .datos_admi{
+      margin: auto;
+      padding-left: 20px;
+  }
+  .input-group{
+      margin-top: 20px;
+      
+  }
+  
+  .input-group label{
+      color: #111d3b;
+      margin: 7px;
+    
+  }
+  .input-group input{
+      border: 1px solid black;
+      
+  }
+  .container{
+      margin: 0%;
+      margin-left: 0%;
+  }
+  .boton_editar{
+      margin-top: 0%;
+  }
+  
+  
+
+  
+
+  

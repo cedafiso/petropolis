@@ -124,89 +124,87 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">Información del usuario</h1>
+            <h1 class="h3 mb-4 text-gray-800">Información y creación del usuario</h1>
           </div>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <input type="submit" value="Buscar usuario" />
-                <form
-                  class="
-                    d-none d-sm-inline-block
-                    form-inline
-                    mr-auto
-                    ml-md-3
-                    my-2 my-md-0
-                    mw-100
-                    navbar-search
-                  "
-                >
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control bg-light border-0 small"
-                      placeholder="Digite el id del usuario"
-                      aria-label="Search"
-                      aria-describedby="basic-addon2"
-                    />
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-                <div>
-                  <input
-                    type="submit"
-                    class="mt-5 inputEditarUser"
-                    value="Editar usuario"
-                  />
-                  <select
-                    class="form-select ml-md-4 mr-auto"
-                    aria-label="Default select example"
-                  >
-                    <option selected>¿Qué desea editar del usuario</option>
-                    <option value="">Nombres</option>
-                    <option value="">ID</option>
-                    <option value="">Password</option>
-                    <option value="">Correo</option>
-                    <option value="">Dependencia</option>
-                    <option value="">Contrato</option>
-                    <option value="">Cargo</option>
-                    <option value="">Fecha ingreso</option>
-                    <option value="">Fecha salida</option>
-                  </select>
-                  <div>
-                    <input
-                      class="mt-5 col-7"
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Ingrese la información actualizada"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 mt-4">
-                <input type="submit" value="Eliminar usuario" />
-                <div>
-                  <label class="mt-4 text-secondary" for=""
-                    >¿Qué deseas eliminar del usuario?</label
-                  >
-                </div>
-              </div>
+          <div class="user_creation">
+            <h4>Registro de usuario</h4>
+            <div class="columna">            
+              <h5>Datos personales</h5>      
+
+              <label for="ID">ID</label>
+              <input type="text" name="ID" id="ID"
+              placeholder="Escriba su ID"/>
+              <br/> 
+        
+              <label for="Nombre">Nombre</label> 
+              <input type="text" name="Nombre" id="Nombre"
+              placeholder="Escriba su nombre"/> <br/>
+        
+              <label for="Fecha de nacimiento">Fecha de nacimiento</label> 
+              <input type="date" name="Fecha" id="Fecha"> <br/>
+        
+              <label>Género</label><br>
+              <input type="radio" name="género" id="Femenino" value="Femenino">
+              <label for="Femenino">Femenino</label> <br>
+              <input type="radio" name="género" id="Masculino" value="Masculino">
+              <label for="Masculino">Masculino</label> <br>
+        
+              <label for="Email">Email:</label> 
+              <input type="email" id="Email" name="Email" required="true"
+              placeholder="Escriba su correo"/> <br/>
+              
+              <label for="Password">Password:</label>
+              <input type="password" id="Password" name="Password" required="true"
+              placeholder="Escriba su contraseña"/>
+              
+              <div class="datos_admi">
+              <h5>Datos administrativos</h5>
+            
+              <label for="Dependencia">Dependencia administrativa</label>
+              <select name="Dependencia" id="Dependencia">
+                  <option value="Gestión humana">Gestión humana</option>
+                  <option value="Logística">Logística</option>
+                  <option value="Limpieza">Limpieza</option>
+              </select> <br>
+
+              <label for="Salario">Salario</label>
+              <select name="Salario" id="Salario">
+                <option value="1.200.000">1.200.000</option>
+                <option value="2.200.000">2.200.000</option>
+                <option value="4.000.000">4.000.000</option>
+              </select> <br>
+
+              <label for="Tipo de contrato">Tipo de contrato</label>
+              <select name="Tipo de contrato" id="Tipo de contrato">
+                <option value="Planta">Planta</option>
+                <option value="Prestación de servicios">Prestación de servicios</option>
+                <option value="Por cláusula">Por cláusula</option>
+              </select> <br>
+
+              <label for="Cargo">Cargo</label>
+              <select name="Cargo" id="Cargo">
+                <option value="Administrador">Administrador</option>
+                <option value="Contador">Contador</option>
+                <option value="Psicólogo">Psicólogo</option>
+              </select> <br>
+
+              <label for="Fecha de ingreso">Fecha de ingreso</label> 
+              <input type="date" name="FechaIngreso" id="FechaIngreso"> <br/>
+
+              <label for="Fecha de salida">Fecha de salida</label> 
+              <input type="date" name="FechaSalida" id="FechaSalida"> <br/>
+
+              <label>¿Desea registrar el nuevo usuario?</label> <br/>
+              <input type="button" name="Aceptar" id="Aceptar" value="Aceptar"> 
+              <input type="button" name="Aceptar" id="Aceptar" value="Cancelar">
             </div>
+            </div>
+                  
           </div>
 
-          <!-- /.container-fluid -->
-        </div>
-        <!-- End of Main Content -->
-      </div>
-      <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Page Wrapper -->
+
+          
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
