@@ -51,8 +51,18 @@ nav{
     padding-left: 0.75em;
 }
 .nav-link-acordion{
-    margin-top: auto;
-    margin-bottom: auto;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.nav-link-acordion a{
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+.sidebar-divider{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .nav-link-end{
     border-right: none;
@@ -388,6 +398,8 @@ th {
   #columna-tabla-perfil> div {
     width: 50%;
   }
+
+
 
 
 
