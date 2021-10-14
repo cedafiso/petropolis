@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Petropolis</title>
+
+    <!-- Custom fonts for this template-->
+    <script
+      src="https://kit.fontawesome.com/966b7cffcc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/sb-admin-2.min.css")}}' />
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/style.css")}}' />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="../Informacion/informacion.html"
+        >
+          <div class="sidebar-brand-icon">
+            <img 
+              width="50"
+              height="50"
+              class="ImgLogo"
+              src='{{ url_for("static", filename="media/logo.png")}}'
+              alt="Logo"
+            />
+          </div>
+          <div class="sidebar-brand-text mx-3">Petropolis</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+        <!-- Nav Item - Utilities Collapse Menu -->
+
+        <!-- Nav Item - Tables -->
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+        <!-- Nav Item - Tables -->
+        
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block" />
+        <!-- Nav Item - Tables -->
+        
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="
+              navbar navbar-expand navbar-light
+              bg-white
+              topbar
+              mb-4
+              static-top
+              shadow
+            "
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+        
+            <h1 class="h3 mb-4 text-gray-800">Información y creación del usuario</h1>
+          </div>
+
+          <div class="user_creation">
+            
+            <h4>Registro de usuario</h4>
+            <div class="columna">            
+              <h5>Datos personales</h5>      
+
+              <label for="ID">ID</label>
+              <input type="text" name="ID" id="ID"
+              placeholder="Escriba su ID"/>
+              <br/> 
+        
+              <label for="Nombre">Nombre</label> 
+              <input type="text" name="Nombre" id="Nombre"
+              placeholder="Escriba su nombre"/> <br/>
+        
+              <label for="Fecha de nacimiento">Fecha de nacimiento</label> 
+              <input type="date" name="Fecha" id="Fecha"> <br/>
+        
+              <label>Género</label><br>
+              <input type="radio" name="género" id="Femenino" value="Femenino">
+              <label for="Femenino">Femenino</label> <br>
+              <input type="radio" name="género" id="Masculino" value="Masculino">
+              <label for="Masculino">Masculino</label> <br>
+        
+              <label for="Email">Email:</label> 
+              <input type="email" id="Email" name="Email" required="true"
+              placeholder="Escriba su correo"/> <br/>
+              
+              <label for="Password">Password:</label>
+              <input type="password" id="Password" name="Password" required="true"
+              placeholder="Escriba su contraseña"/>
+              
+              <div class="datos_admi">
+              <h5>Datos administrativos</h5>
+            
+              <label for="Dependencia">Dependencia administrativa</label>
+              <select name="Dependencia" id="Dependencia">
+                  <option value="Gestión humana">Gestión humana</option>
+                  <option value="Logística">Logística</option>
+                  <option value="Limpieza">Limpieza</option>
+              </select> <br>
+
+              <label for="Salario">Salario</label>
+              <select name="Salario" id="Salario">
+                <option value="1.200.000">1.200.000</option>
+                <option value="2.200.000">2.200.000</option>
+                <option value="4.000.000">4.000.000</option>
+              </select> <br>
+
+              <label for="Tipo de contrato">Tipo de contrato</label>
+              <select name="Tipo de contrato" id="Tipo de contrato">
+                <option value="Planta">Planta</option>
+                <option value="Prestación de servicios">Prestación de servicios</option>
+                <option value="Por cláusula">Por cláusula</option>
+              </select> <br>
+
+              <label for="Cargo">Cargo</label>
+              <select name="Cargo" id="Cargo">
+                <option value="Administrador">Administrador</option>
+                <option value="Contador">Contador</option>
+                <option value="Psicólogo">Psicólogo</option>
+              </select> <br>
+
+              <label for="Fecha de ingreso">Fecha de ingreso</label> 
+              <input type="date" name="FechaIngreso" id="FechaIngreso"> <br/>
+
+              <label for="Fecha de salida">Fecha de salida</label> 
+              <input type="date" name="FechaSalida" id="FechaSalida"> <br/>
+
+              <label>¿Desea registrar el nuevo usuario?</label> <br/>
+              <input type="button" name="Aceptar" id="Aceptar" value="Aceptar"> 
+              <input type="button" name="Aceptar" id="Aceptar" value="Cancelar">
+            </div>
+            </div>
+            <br/>   
+          </div>
+          <div class="user_creation">
+            <h4>Edición del usuario</h4>
+            <div class="columna">
+              <div class="buscar_empleado">
+              <h5>Buscar usuario</h5>
+              <label for="Buscar">Buscar Usuario</label>
+              <input type="text" name="Buscar" id="Buscar"
+              placeholder="Escriba el id del usuario"> 
+              <br/>
+              </div>
+              
+              <h5>Editar usuario</h5>
+              <label for="Buscar_user">Buscar Usuario</label>
+              <input type="text" name="Buscar_user" id="Buscar_user"
+              placeholder="Escriba el id del usuario">
+
+              <label for="Editar">¿Qué campo desea actualizar?</label>
+              <select name="Editar" id="Editar">
+                <option value="ID">ID</option>
+                <option value="Nombres">Nombres</option>
+                <option value="Email">Email</option>
+                <option value="Password">Password</option>                
+                <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                <option value="Género">Género</option>
+                <option value="Dependencia">Dependencia</option>
+                <option value="Salario">Salario</option>
+                <option value="Tipo de contrato">Tipo de contrato</option>
+                <option value="Cargo">Cargo</option>
+                <option value="Fecha de ingreso">Fecha de ingreso</option>
+                <option value="Fecha de salida">Fecha de salida</option>
+              </select> <br>
+
+              <label for="Digite">Actualice el campo requerido</label>
+              <input type="text" name="Digite" id="Digite">
+              <label>¿Desea actualizar el campo?</label> <br/>
+              <input type="button" name="Actualizar" id="Actualizar" value="Actualizar"> 
+              <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
+            </div>
+          </div>
+<br/>
+          <div class="user_creation">
+            <h4>Manejo del usuario</h4>
+            <div class="columna">
+                <div class="eliminar_user">
+                  <h5>Eliminar usuario</h5>
+                  <label for="Buscar_user">Ingrese el id del usuario</label>
+                  <input type="text" name="Buscar_user" id="Buscar_user"
+                  placeholder="Escriba el id del usuario"> <br/>
+                 
+                  <label for="Eliminar">¿Qué tipo de eliminación desea realizar?</label>
+                  <select name="Eliminar" id="Eliminar">
+                    <option value="Campos de usuario">Campos de usuario</option>
+                    <option value="Total">Total</option>
+                  </select> <br>
+                
+                  <label for="Eliminar">¿Qué campo desea eliminar?</label>
+                  <select name="Eliminar" id="Eliminar">
+                    <option value="ID">ID</option>
+                    <option value="Nombres">Nombres</option>
+                    <option value="Email">Email</option>
+                    <option value="Password">Password</option>                
+                    <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                    <option value="Género">Género</option>
+                    <option value="Dependencia">Dependencia</option>
+                    <option value="Salario">Salario</option>
+                    <option value="Tipo de contrato">Tipo de contrato</option>
+                    <option value="Cargo">Cargo</option>
+                    <option value="Fecha de ingreso">Fecha de ingreso</option>
+                    <option value="Fecha de salida">Fecha de salida</option>
+                  </select> <br>
+                  <label>¿Está seguro de realizar la siguiente acción?</label> <br/>
+                  <input type="button" name="Eliminar" id="Eliminar" value="Eliminar"> 
+                  <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
+
+                  <div class="agregar_info">
+                    <h5>Agregar informacion del usuario</h5>
+                    <label for="agregar_info">Ingrese el id del usuario</label>
+                    <input type="text" name="agregar_info" id="agregar_info"
+                    placeholder="Escriba el id del usuario">
+          
+                      <label for="Agregar">¿Qué campo desea agregar?</label>
+                      <select name="Editar" id="Editar">
+                      <option value="ID">ID</option>
+                      <option value="Nombres">Nombres</option>
+                      <option value="Email">Email</option>
+                      <option value="Password">Password</option>                
+                      <option value="Fecha de nacimiento">Fecha de nacimiento</option>
+                      <option value="Género">Género</option>
+                      <option value="Dependencia">Dependencia</option>
+                      <option value="Salario">Salario</option>
+                      <option value="Tipo de contrato">Tipo de contrato</option>
+                      <option value="Cargo">Cargo</option>
+                      <option value="Fecha de ingreso">Fecha de ingreso</option>
+                      <option value="Fecha de salida">Fecha de salida</option>
+                    </select> <br>
+                    <label>¿Está seguro de realizar la siguiente acción?</label> <br/>
+                  <input type="button" name="si" id="si" value="Si"> 
+                  <input type="button" name="Cancelar" id="Cancelar" value="Cancelar">
+                </div>
+              </div> 
+            </div>
+            </div> 
+          </div>
+            
+          
+
+          
+
+
+
+
+
+
+
+
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../assets/js/sb-admin-2.min.js"></script>
+  </body>
+</html>
+<style></style>
+
+        <a href="/templates/index.html">inicio</a>

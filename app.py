@@ -23,6 +23,10 @@ def productos():
 def loginDashboard():
     return render_template('./Dashboard/dashboard.html')
 
+@app.route('/dashboard_admi')
+def loginDashboardAdmi():
+    return render_template('./Dashboard/dashboard_admi.html')
+
 @app.route('/dashboard/actividades')
 def loginActividades():
     return render_template('./Actividades/actividades.html')

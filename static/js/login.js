@@ -8,5 +8,7 @@ loginButton.addEventListener("click" , (e) => {
     let password = loginForm.password.value;
     if (username == "Demo" && password == "1234"){
         window.location.href = `/dashboard`;
+    }else if (username = "DemoAdmin" && password == "1234"){
+        window.location.href = '/dashboard_admi';
     }
 });
