@@ -1,305 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+{% extends "./Dashboard/base_dashboard.html" %}
+{% block content %}
+<h1 class="h3 mb-4 text--800"></h1>
+<div class="container">
 
-    <title>Petropolis</title>
-
-    <!-- Custom fonts for this template-->
-    <script
-      src="https://kit.fontawesome.com/966b7cffcc.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
-
-    <!-- Custom styles for this template-->
-    <link rel="stylesheet" href='{{ url_for("static", filename="css/sb-admin-2.min.css")}}' />
-    <link rel="stylesheet" href='{{ url_for("static", filename="css/style.css")}}' />
-  </head>
-
-  <body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-      <!-- Sidebar -->
-      <ul
-        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
-        id="accordionSidebar"
-      >
-        <!-- Sidebar - Brand -->
-        <a
-          class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="../Informacion/informacion.html"
-        >
-          <div class="sidebar-brand-icon">
-            <img
-              width="50"
-              height="50"
-              class="ImgLogo"
-              src='{{ url_for("static", filename="media/logo.png")}}'
-              alt="Logo"
-            />
-          </div>
-          <div class="sidebar-brand-text mx-3">Petropolis</div>
-        </a>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-          <a class="nav-link nav-link-acordion" href="/dashboard">
-            <i class="far fa-address-card"></i>
-            <span>Información</span></a
-          >
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-        <li class="nav-item">
-          <a
-            class="nav-link nav-link-acordion"
-            href="/dashboard/retroalimentacion"
-          >
-            <i class="fas fa-people-arrows"></i>
-            <span>Retroalimentación</span></a
-          >
-        </li>
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block" />
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-          <a class="nav-link nav-link-acordion" href="/dashboard/actividades">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Actividades</span></a
-          >
-        </li>
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-      </ul>
-      <!-- End of Sidebar -->
-
-      <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
-        <!-- Main Content -->
-        <div id="content">
-          <!-- Topbar -->
-          <nav
-            class="
-              navbar navbar-expand navbar-light
-              bg-white
-              topbar
-              mb-4
-              static-top
-              shadow
-            "
-          >
-          <h2 class="titulo-retro">RETROALIMENTACION</h2>
-            <!-- Sidebar Toggle (Topbar) -->
-            <button
-              id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
-          </nav>
-          <!-- End of Topbar -->
-
-          <!-- Begin Page Content -->
-          <div class="container-fluid">
-            <!-- Page Heading -->
-            <h1 class="h3 mb-4 text--800"></h1>
-        </div>
-          <!-- /.container-fluid -->
-        <div class="container">
-            
-            <div class="card shadow mb-2">
-                <div class="card-header py-3">
-                    <h3 class="m-0 font-weight-bold text-primary">Comentarios</h3>
-            </div>
-                <div class="card-body">
-                    <div class="text-left">
-                  <header></header>
-                  <br>
-                  <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus in error ipsum aliquid incidunt? Neque molestias, cupiditate iure nemo voluptate pariatur, sapiente nulla laudantium, sunt necessitatibus perferendis omnis facere repellat?
-                  </p>
-
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, vero voluptatibus, obcaecati sapiente dicta quam impedit alias autem dignissimos voluptas voluptate quidem minus, officia deleniti fugiat sequi cupiditate commodi dolores.</p>
-
-                  <small>Recursos Humanos</small>
-              <br>
-              <br>
-              <br>
-
-            </div>
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                  <h3 class="m-0 font-weight-bold text-primary">Puntaje</h3>
-              </div>
-              <div class="card-body">
-                  <div class="text-center">
-              </div>
-                  <table> 
-                    <colgroup>
-                      <col span="5"> 
-                      <col>
-                    </colgroup>
-                    <thead>
-                      <tr class="tabla-retro">
-                        <th></th>
-                        <th>Producto</th>
-                        <th>Cantidad</th>
-                        <th>Meta</th>
-                        <th>Cumplió?</th>
-                      </tr>	
-                    </thead>
-                    
-                    <tbody>
-                  <tr class="tabla-retro">
-                    <td></td>
-                    <td>Board</td>
-                    <td>25</td>
-                    <td>13</td>
-                    <td>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    </td>
-                  </tr>
-                  
-                  <tr class="tabla-retro">
-                    <td></td>
-                    <td>Mouse</td>
-                    <td>38</td>
-                    <td>25</td>
-                    <td>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    </td>
-                  </tr>
-                  
-                  <tr class="tabla-retro">
-                    <td></td>
-                    <td>Pantalla</td>
-                    <td>7</td>
-                    <td>1</td>
-                    <td>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    </td>
-                  </tr>
-
-                  <tr class="tabla-retro">
-                    <td></td>
-                    <td>Teclado</td>
-                    <td>40</td>
-                    <td>30</td>
-                    <td>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    </td>
-                  </tr>
-
-                  <tr class="tabla-retro">
-                    <td></td>
-                    <td>Torres</td>
-                    <td>3</td>
-                    <td>15</td>
-                    <td>
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                    </td>
-                  </tr>
-                    </tbody>
-                  </table>
-
-
-                </div>
-                  <br>
-                  <br>
-                  <div class="card-header py-3">
-                    <h3 class="m-0 font-weight-bold text-primary"></h3>
-                    <div class="card shadow mb-4">
-                      <div class="card-header py-3">
-                        <h3 class="m-0 font-weight-bold text-primary">Desempeño</h3>
-                      </div>
-                    </div>
-                      <div class="card-body">
-                          <div class="text-left">
-                            <p><img src="/static/media/Drbrief.png" width="170" height="130" align="left"> <br> <ul type="circle"><li>Pepito Perez</p></li> <li><p>Técnico en sistemas</p></li> <li><p>Área de Ventas</p></li></ul>
-                          </div>
-                          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est unde sapiente vitae corrupti, autem repellendus consequuntur repellat nihil temporibus natus aut in iusto! Corporis sapiente architecto nisi minus, veritatis eum?</p>
-                      </div>
-                  </div>
-                      
-                  <br>
-                  </div>
-                </div>
-
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                      <h6 class="m-0 font-weight-bold text-primary">Áreas a calificar</h6>
-                  </div>
-                  <div class="card-body">
-                      <h4 class="small font-weight-bold">Puntualidad <span class="float-right">20%</span></h4>
-                      <div class="progress mb-4">
-                          <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <h4 class="small font-weight-bold">Presentación Personal<span class="float-right">40%</span></h4>
-                      <div class="progress mb-4">
-                          <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <h4 class="small font-weight-bold">Trabajo en Equipo <span class="float-right">60%</span></h4>
-                      <div class="progress mb-4">
-                          <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <h4 class="small font-weight-bold">Ventas <span class="float-right">80%</span></h4>
-                      <div class="progress mb-4">
-                          <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <h4 class="small font-weight-bold">Asistencia <span class="float-right">100%</span></h4>
-                      <div class="progress">
-                          <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-            </div>
-        </div>
-
-
-        <!-- End of Main Content -->
-      </div>
-      <!-- End of Content Wrapper -->
+  <div class="card shadow mb-2">
+    <div class="card-header py-3">
+      <h3 class="m-0 font-weight-bold text-primary">Comentarios</h3>
     </div>
-    <!-- End of Page Wrapper -->
+    <div class="card-body">
+      <div class="text-left">
+        <header></header>
+        <br>
+        <p class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus in error ipsum aliquid
+          incidunt? Neque molestias, cupiditate iure nemo voluptate pariatur, sapiente nulla laudantium, sunt
+          necessitatibus perferendis omnis facere repellat?
+        </p>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, vero voluptatibus, obcaecati sapiente
+          dicta quam impedit alias autem dignissimos voluptas voluptate quidem minus, officia deleniti fugiat sequi
+          cupiditate commodi dolores.</p>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <small>Recursos Humanos</small>
+        <br>
+        <br>
+        <br>
 
-    <!-- Core plugin JavaScript-->
-    <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+      </div>
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h3 class="m-0 font-weight-bold text-primary">Puntaje</h3>
+        </div>
+        <div class="card-body">
+          <div class="text-center">
+          </div>
+          <table>
+            <colgroup>
+              <col span="5">
+              <col>
+            </colgroup>
+            <thead>
+              <tr class="tabla-retro">
+                <th></th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Meta</th>
+                <th>Cumplió?</th>
+              </tr>
+            </thead>
 
-    <!-- Custom scripts for all pages-->
-    <script src="../../assets/js/sb-admin-2.min.js"></script>
-  </body>
-</html>
+            <tbody>
+              <tr class="tabla-retro">
+                <td></td>
+                <td>Board</td>
+                <td>25</td>
+                <td>13</td>
+                <td>
+                  <label>
+                    <input type="checkbox">
+                  </label>
+                </td>
+              </tr>
+
+              <tr class="tabla-retro">
+                <td></td>
+                <td>Mouse</td>
+                <td>38</td>
+                <td>25</td>
+                <td>
+                  <label>
+                    <input type="checkbox">
+                  </label>
+                </td>
+              </tr>
+
+              <tr class="tabla-retro">
+                <td></td>
+                <td>Pantalla</td>
+                <td>7</td>
+                <td>1</td>
+                <td>
+                  <label>
+                    <input type="checkbox">
+                  </label>
+                </td>
+              </tr>
+
+              <tr class="tabla-retro">
+                <td></td>
+                <td>Teclado</td>
+                <td>40</td>
+                <td>30</td>
+                <td>
+                  <label>
+                    <input type="checkbox">
+                  </label>
+                </td>
+              </tr>
+
+              <tr class="tabla-retro">
+                <td></td>
+                <td>Torres</td>
+                <td>3</td>
+                <td>15</td>
+                <td>
+                  <label>
+                    <input type="checkbox">
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+        <br>
+        <br>
+        <div class="card-header py-3">
+          <h3 class="m-0 font-weight-bold text-primary"></h3>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h3 class="m-0 font-weight-bold text-primary">Desempeño</h3>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="text-left">
+              <p><img src="/static/media/Drbrief.png" width="170" height="130" align="left"> <br>
+              <ul type="circle">
+                <li>Pepito Perez</p>
+                </li>
+                <li>
+                  <p>Técnico en sistemas</p>
+                </li>
+                <li>
+                  <p>Área de Ventas</p>
+                </li>
+              </ul>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est unde sapiente vitae corrupti, autem
+              repellendus consequuntur repellat nihil temporibus natus aut in iusto! Corporis sapiente architecto nisi
+              minus, veritatis eum?</p>
+          </div>
+        </div>
+
+        <br>
+      </div>
+    </div>
+
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Áreas a calificar</h6>
+      </div>
+      <div class="card-body">
+        <h4 class="small font-weight-bold">Puntualidad <span class="float-right">20%</span></h4>
+        <div class="progress mb-4">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Presentación Personal<span class="float-right">40%</span></h4>
+        <div class="progress mb-4">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Trabajo en Equipo <span class="float-right">60%</span></h4>
+        <div class="progress mb-4">
+          <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Ventas <span class="float-right">80%</span></h4>
+        <div class="progress mb-4">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Asistencia <span class="float-right">100%</span></h4>
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
