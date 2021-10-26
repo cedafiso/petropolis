@@ -63,6 +63,7 @@ def loginDashboard():
     return render_template('./Dashboard/dashboard.html')
 
 @app.route('/dashboard_admi')
+@login_required
 def loginDashboardAdmi():
     return render_template('./Dashboard/dashboard_admi.html')
 
