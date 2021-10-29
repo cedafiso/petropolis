@@ -1,59 +1,50 @@
-from flask import Flask, render_template, request
-import dbConexion
+from flask import Flask, render_template, request, flash
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
 
 #Se crea el objeto que manejara la aplicacion
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///Petropolis.db"
+app.config['SECRET_KEY'] = 'jo3n2o23noi42'
+db = SQLAlchemy(app)
+login_manager = LoginManager(app)
+login_manager.init_app(app)
 
-class isUserLog:
+class USUARIOS(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    USER = db.Column(db.String(30), unique=True)
+    PASSWORD = db.Column(db.String(30), unique=True)
+    ADMIN = db.Column(db.Integer, unique=False)
 
-    def __init__(self):
-        self.isUserLog = False
 
-    def checkAuth(self, user, password):
-        db = dbConexion.init_app(app);
-        query = "SELECT USER, PASSWORD FROM Usuarios WHERE USER = \'{}\' AND PASSWORD = \'{}\';".format(user, password)
-        result = []
-        for i in db.execute(query):
-            result.append(i) if type(i) == list else result.append(0)
-            
-        if len(result) != 0:
-            self.isUserLog = True
-            return True
-        else:
-            self.isUserLog = False
+login_manager = LoginManager()
+login_manager.init_app(app)
 
-    def logOut(self):
-        self.isUserLog = False
-
-loginUser = isUserLog();
+@login_manager.user_loader
+def load_user(user_id):
+    return USUARIOS.query.get(int(user_id))
 
 @app.route('/')
 def index():
     return render_template('/Index/index.html')
 
-@app.route('/login/<string:ruta>/')
 @app.route('/login/', methods=["GET", "POST"])
 def login(ruta=""):
     if request.method == "GET":
-        if(loginUser.isUserLog and ruta == "Actividades"):
-            return loginActividades()
-        elif(loginUser.isUserLog and ruta == "Retroalimentacion"):
-            return retroalimentacion()
-        elif(loginUser.isUserLog and ruta == "Informacion"):
-            return loginDashboard()
-        else:
-            return render_template('./Ingresar/ingresar.html')
+        return render_template('./Ingresar/ingresar.html')
     elif request.method == 'POST':
         user = request.form['user']
         password = request.form['password']
-        if (loginUser.checkAuth(user, password) and ruta == ""):
-            return loginDashboard()
+        username = USUARIOS.query.filter_by(USER=user, PASSWORD=password).first()
+        login_user(username)
+        if current_user.is_authenticated:
+            flash('You have successfully logged in')
+            if (current_user.ADMIN == 1):
+                return render_template('./Dashboard/dashboard_admi.html')
+            else:
+                return render_template('./Dashboard/dashboard.html')
         else:
-            return render_template('./Ingresar/ingresar.html')
-    elif request.method == 'PUT':
-        loginUser.isUserLog()
-        return render_template('./Ingresar/ingresar.html')
-          
+            return render_template('./Ingresar/ingresar.html') 
 
 
 @app.route('/nosotros')
@@ -64,19 +55,22 @@ def nosotros():
 def productos():
     return render_template('./Productos/productos.html')
     
-
+@app.route('/Dashboard')
+@login_required
 def loginDashboard():
     return render_template('./Dashboard/dashboard.html')
 
 @app.route('/dashboard_admi')
+@login_required
 def loginDashboardAdmi():
     return render_template('./Dashboard/dashboard_admi.html')
 
-
+@app.route('/Actividades')
+@login_required
 def loginActividades():
     return render_template('./Actividades/actividades.html')
 
-
+@app.route('/Retroalimentacion')
 def retroalimentacion():
     return render_template("./Retroalimentacion/retroalimentacion.html")
     
