@@ -1,8 +1,6 @@
-from flask import Flask, render_template, request, flash, abort, redirect
+from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
-from auth import is_safe_url
-import dbConexion
 
 #Se crea el objeto que manejara la aplicacion
 app = Flask(__name__)
@@ -57,8 +55,8 @@ def nosotros():
 def productos():
     return render_template('./Productos/productos.html')
     
-@login_required
 @app.route('/Dashboard')
+@login_required
 def loginDashboard():
     return render_template('./Dashboard/dashboard.html')
 
