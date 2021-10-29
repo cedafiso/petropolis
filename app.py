@@ -54,11 +54,15 @@ def nosotros():
 @app.route('/productos')
 def productos():
     return render_template('./Productos/productos.html')
-    
+ 
 @app.route('/Dashboard')
 @login_required
 def loginDashboard():
     return render_template('./Dashboard/dashboard.html')
+
+@app.route('/contactos')
+def contactos():
+    return render_template('./Contactos/contactos.html')
 
 @app.route('/dashboard_admi')
 @login_required
