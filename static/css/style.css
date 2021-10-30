@@ -281,7 +281,7 @@ th {
     display: inline-block;
     color: white;
     text-decoration: none;
-    background-color: rgb(96, 71, 112);
+    background-color: #7F7CAF;
     padding: 10px;
     width: 20px;
     height: 20px;
@@ -415,7 +415,14 @@ th {
     padding-bottom: 30px;
   }
 
-  
+  .imagen_contactos {
+    padding: 10px; 
+    margin: 10px; 
+    border: 2px solid; 
+    float: right; 
+    width: 300px;
+    
+  }
 
 
 
