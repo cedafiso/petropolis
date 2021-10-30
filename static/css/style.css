@@ -310,15 +310,25 @@ th {
       margin: 10px;
       column-gap: 30px;
       column-rule: 2px solid rgb(0, 0, 0);
-      
-      
   }
+
+    .buttons{
+        text-align: center;
+        color: #13192A;
+        margin-bottom: 30px;
+    }
   .user_creation label{
       text-align: center;
   }
   .datos_admi{
       margin: auto;
       padding-left: 20px;
+      margin-top: 50px;
+
+  }
+  .user_creation input{
+      width: 270px;
+      text-align: justify;
   }
   .input-group{
       margin-top: 20px;
