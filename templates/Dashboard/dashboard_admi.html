@@ -2,13 +2,12 @@
 {% block content %}
 <h1 class="h3 mb-4 text-gray-800">Información y edición del usuario</h1>
 <div class="user_creation">
-
   <h4>Registro de usuario</h4>
   <div class="columna">
     <h5>Datos personales</h5>
 
-    <label for="ID">ID</label>
-    <input type="text" name="ID" id="ID" placeholder="Escriba su ID" />
+    <label for="id">id</label>
+    <input type="text" name="id" id="id" placeholder="Escriba su id" />
     <br />
 
     <label for="Nombre">Nombre</label>
@@ -69,6 +68,9 @@
       <input type="button" name="Editar" value="Editar">
       <input type="button" name="Eliminar" value="Eliminar">
       </div>
+      <div class="navbar-start">
+        <a class="navbar-item" href="{{url_for('usuarios')}}">usuarios</a>
+    </div>
 
 
     

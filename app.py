@@ -105,7 +105,7 @@ def retroalimentacion():
 
 @app.route('/agregar_usuario')
 def formulario_agregar():
-    return render_template('agregar_usuario.html')
+    return render_template('/agregar_usuario.html')
 
 @app.route("/guardar_usuario", methods=["POST"])
 def guardar_usuario():
