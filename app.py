@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
+import os
 
 #Se crea el objeto que manejara la aplicacion
 app = Flask(__name__)
@@ -96,7 +97,8 @@ def loginActividades():
 @login_required
 def retroalimentacion():
     return render_template("./Retroalimentacion/retroalimentacion.html")
-    
+
+port = int(os.environ.get("PORT", 5000))
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
 
