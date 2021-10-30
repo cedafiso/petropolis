@@ -12,7 +12,7 @@
               <div id="perfil"><img src="/static/media/Drbrief.png" width="300" height="300" id="logo-perfil"> <img
                   src="/static/media/logo.png" width="110" height="110">
 
-                <p id="nombre-perfil">PEPITO PEREZ FRUTA</p>
+                <p id="nombre-perfil">{{ current_user.Nombre }} {{ current_user.Apellido }} </p>
 
               </div>
               <br>
@@ -22,21 +22,21 @@
               <div>
                 <p id="texto-col-perfil">Datos Personales</p>
                 <p>Sexo: Masculino</p>
-                <p>Fecha Nacimiento: 15/04/1960</p>
-                <p>Edad: 61</p>
-                <p>Celular: 3005894623</p>
-                <p>Dirección: Dg52 # 54a-30</p>
-                <p>Correo: pepitoperez@gmail.com</p>
+                <p>Fecha Nacimiento: {{ current_user.Fecha_Nacimiento }}</p>
+                <p>Edad: {{ current_user.Edad }}</p>
+                <p>Celular: {{ current_user.Telefono }}</p>
+                <p>Dirección: {{ current_user.Direccion }}</p>
+                <p>Correo: {{ current_user.Correo }}</p>
 
               </div>
               <div>
                 <p id="texto-col-perfil">Datos Administrativos</p>
-                <p>Dependencia: Operativa</p>
-                <p>Salario: 1`800.000</p>
+                <p>Dependencia: {{ current_user.Depedencia }}</p>
+                <p>Salario: {{ current_user.Salario }}</p>
                 <p>Tipo Contrato: Indefinido</p>
-                <p>Cargo: Vendedor</p>
-                <p>Fecha de Ingreso: 21/12/2018</p>
-                <p>Fecha de Salida: N/A</p>
+                <p>Cargo: {{ current_user.Cargo }}</p>
+                <p>Fecha de Ingreso: {{ current_user.Fecha_Ingreso }}</p>
+                <p>Fecha de Salida:{{ current_user.Fecha_Salida}}</p>
               </div>
             </div>
 

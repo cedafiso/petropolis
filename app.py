@@ -12,9 +12,25 @@ login_manager.init_app(app)
 
 class USUARIOS(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    USER = db.Column(db.String(30), unique=True)
-    PASSWORD = db.Column(db.String(30), unique=True)
-    ADMIN = db.Column(db.Integer, unique=False)
+    User = db.Column(db.String(30), unique=True)
+    Password = db.Column(db.String(30), unique=False)
+    Admin = db.Column(db.Integer, unique=False)
+    Nombre = db.Column(db.String(30), unique=False)
+    Codigo_Empleado = db.Column(db.Integer, unique=True)
+    Fecha_Ingreso = db.Column(db.String(30), unique=False)
+    Fecha_Salida = db.Column(db.String(30), unique=False)
+    Cargo = db.Column(db.String(30), unique=False)
+    Depedencia= db.Column(db.String(30), unique=False)
+    Salario = db.Column(db.Float(30), unique=False)
+    Desempeno= db.Column(db.Integer, unique=False)
+    Puntaje= db.Column(db.Integer, unique=False) 
+    Retroalimentacion = db.Column(db.String(30), unique=False)
+    Apellido = db.Column(db.String(30), unique=False)
+    Edad = db.Column(db.Integer, unique=False)
+    Fecha_Nacimiento = db.Column(db.String(30), unique=False)
+    Telefono = db.Column(db.Integer, unique=False)
+    Correo = db.Column(db.String(30), unique=False)
+    Direccion = db.Column(db.String(30), unique=False)
 
 
 login_manager = LoginManager()
@@ -35,11 +51,13 @@ def login(ruta=""):
     elif request.method == 'POST':
         user = request.form['user']
         password = request.form['password']
-        username = USUARIOS.query.filter_by(USER=user, PASSWORD=password).first()
-        login_user(username)
+        username = USUARIOS.query.filter_by(User=user, Password=password).first()
+        if username is None:
+            return render_template('./Ingresar/ingresar.html') 
+        else:
+            login_user(username)
         if current_user.is_authenticated:
-            flash('You have successfully logged in')
-            if (current_user.ADMIN == 1):
+            if (current_user.Admin == 1):
                 return render_template('./Dashboard/dashboard_admi.html')
             else:
                 return render_template('./Dashboard/dashboard.html')
@@ -54,6 +72,10 @@ def nosotros():
 @app.route('/productos')
 def productos():
     return render_template('./Productos/productos.html')
+
+@app.route('/contactos')
+def contactos():
+    return render_template("./Contactos/contactos.html")
     
 @app.route('/Dashboard')
 @login_required
@@ -71,8 +93,9 @@ def loginActividades():
     return render_template('./Actividades/actividades.html')
 
 @app.route('/Retroalimentacion')
+@login_required
 def retroalimentacion():
     return render_template("./Retroalimentacion/retroalimentacion.html")
     
 if __name__=='__main__':
-    app.run(port=8080, debug=True)
+    app.run(debug=True)
