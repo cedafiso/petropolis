@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, flash, redirect
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
 import controlador
+import os
 
 
 
@@ -146,9 +147,8 @@ def eliminar_usuario():
     controlador.eliminar(request.form["id"])
     return redirect("/usuarios")
 
-@app.route("/formulario_editar_usuario/<Integer:id>")
+@app.route("/formulario_editar_usuario/<int:id>")
 def editar_usuario(id):
-    
     usuarios = controlador.obtener_usuario_por_id(id)
     return render_template("editar_usuario.html", usuarios=usuarios)
 
@@ -179,7 +179,7 @@ def actualizar_usuario():
     return redirect("/usuarios")
     
 
-    
+port = int(os.environ.get("PORT", 5000))
 if __name__=='__main__':
     app.run(host='0.0.0.0', port=port, debug=True)
 
