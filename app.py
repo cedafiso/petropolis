@@ -73,13 +73,10 @@ def nosotros():
 def productos():
     return render_template('./Productos/productos.html')
 
-<<<<<<< HEAD
-=======
 @app.route('/contactos')
 def contactos():
     return render_template("./Contactos/contactos.html")
     
->>>>>>> 9e08950a163ef3a4143ee20db59da93b344976eb
 @app.route('/Dashboard')
 @login_required
 def loginDashboard():
