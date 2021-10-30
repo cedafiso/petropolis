@@ -105,7 +105,7 @@ def retroalimentacion():
 
 @app.route('/agregar_usuario')
 def formulario_agregar():
-    return render_template('/agregar_usuario.html')
+    return render_template('agregar_usuario.html')
 
 @app.route("/guardar_usuario", methods=["POST"])
 def guardar_usuario():
@@ -130,7 +130,6 @@ def guardar_usuario():
     Password = request.form["Password"]
     Admin = request.form["Fecha_Salida"]
     authenticated = request.form["authenticated"]
-
 
     controlador.insertar(id,Codigo_Empleado,Fecha_Ingreso,Fecha_Salida,Cargo,Dependencia,Salario,Desenpeno,Puntaje,Retroalimentacion,Nombre,Apellido,Edad,Fecha_Nacimiento,Telefono,Correo,Direccion,User,Password,Admin,authenticated)
     return redirect("/usuarios")
