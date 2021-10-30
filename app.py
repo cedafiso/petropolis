@@ -96,6 +96,10 @@ def loginActividades():
 @login_required
 def retroalimentacion():
     return render_template("./Retroalimentacion/retroalimentacion.html")
+
+
+
+
     
 if __name__=='__main__':
     app.run(debug=True)
