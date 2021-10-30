@@ -1,4 +1,3 @@
-from app import usuarios
 from dbConexion import get_db
 
 def insertar (id,Codigo_Empleado,Fecha_Ingreso,Fecha_Salida,Cargo,Dependencia,Salario,Desenpeno,Puntaje,Retroalimentacion,Nombre,Apellido,Edad,Fecha_Nacimiento,Telefono,Correo,Direccion,User,Password,Admin,authenticated):
