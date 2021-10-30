@@ -100,7 +100,9 @@ def loginActividades():
 def retroalimentacion():
     return render_template("./Retroalimentacion/retroalimentacion.html")
 
-@app.route('./agregar_usuario')
+#Desde aquí comienza el crud
+
+@app.route('/agregar_usuario')
 def formulario_agregar():
     return render_template('agregar_usuario.html')
 
